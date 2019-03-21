@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#app {
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(33, 220, 133);
+}
+
+.container {
+    width: 9.333333rem;
+    margin: 0.4rem auto 0 auto;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+.bannerCon{
+    width: 95%;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    background-color: #eaeaea;
+}
+.banner{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -1rem;
+    border-radius: 0.4rem;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ranking{
+    margin: 0.1rem;
+    text-align: center;
+}
+.ranking p{
+    font-size: 20px;
+    color: #636363;
+    line-height: 1rem;
+    margin-bottom: 0.222rem;
+}
+.qrcodeBox{
+    width: 3rem;
+    height: 3rem;
+}
+.qrcodeBox img{
+    width: 100%;
+}
+.clearFix::after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: '.';
+    visibility: hidden;
+}
+.btnCon{
+    margin: 1.2rem auto;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.btnItem{
+    margin: 0 0.3rem;
+    text-align: center;
+    width: 1.7rem;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    background-color: #fff;
+    border-radius: 0.1rem;
+}
+.save{
+    /*margin-right: 1rem;*/
+}
+.longPress{
+    color: #ffffff;
+    font-size: 20px;
+}
+.shareImg {
+    z-index: 6;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.shareImg img {
+    width: 100%;
+    /*pointer-events: none;*/
+}

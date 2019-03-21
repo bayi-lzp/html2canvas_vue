@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no,width=device-width, minimal-ui">
+    <title>html2canvas</title>
+    <link rel="stylesheet" href="./style/index.css?v=20101212">
+</head>
+
+<body>
+<div id="app" ref="app">
+    <div class="container">
+        <h3 class="title">拉新活动</h3>
+        <div class="bannerCon" >
+            <div class="banner">
+                <div class="avatar">
+                    <!-- 本地的图片是可以绘画到canvas上的，且可以使用canvas.toDataURL API，但是其他服务器上的图片不行-->
+                    <!--<img id="avatar" src="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKVkoe7Viae4lreoZBybEywysxHlnlqplGTbaJLQI7pV8W5KMFK1DqBrNntO5O9wT0YYP9cgP6m4dA/132">-->
+                    <img :src="avatar" alt="">
+                </div>
+                <div class="ranking">
+                    <p>排行榜第七名</p>
+                    <p>已经超过80%同事</p>
+                </div>
+                <div id="qrcode" class="qrcodeBox"></div>
+                <p style="opacity: 0; margin-top: 2px" ref="scanText" id="scanText">-- 长按保存 --</p>
+            </div>
+        </div>
+    </div>
+    <div class="btnCon clearFix">
+        <!-- data-html2canvas-ignore 用来去除不需要上传的标签-->
+        <div class="btnItem save" @click="createImage" v-show="CanvasImageHide" data-html2canvas-ignore>保存图片</div>
+        <div class="btnItem share" v-show="CanvasImageHide" data-html2canvas-ignore>分享好友</div>
+    </div>
+    <!--生成的图片的存放容器-->
+    <div class="shareImg" ref="shareImg" id="shareImg" style=""></div>
+</div>
+<script src="js/flexible.js?v=20101212"></script>
+<script src="js/html2canvas.js?v=20101212"></script>
+<script src="js/vue-2.4.2.min.js?v=20101212"></script>
+<script src="js/qrcode.js?v=20101212"></script>
+<script src="js/index.js?v=20101212"></script>
+</body>
+</html>
